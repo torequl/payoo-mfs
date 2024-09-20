@@ -18,7 +18,10 @@
 
           <div class="stats shadow">
             <div class="stat space-y-2">
-              <div class="stat-value">$ 89,400</div>
+              <div class="flex justify-center items-center">
+                <div id="balance" class="stat-value text-center">00</div>
+                <div class="text-3xl font-bold">&nbsp;tk</div>
+              </div>
               <div class="text-xl">Available Balance</div>
             </div>
           </div>
@@ -29,19 +32,20 @@
           </div>
           <div class="divider"></div>
           <!-- Ad Mony Form Start -->
-          <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+          <div class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
             <form class="card-body">
               <div class="form-control">
                 <label class="label">
-                  <span class="label-text">Amount</span>
+                  <span class="label-text font-bold">Amount</span>
                 </label>
-                <input type="number" placeholder="Amount" class="input input-bordered" required />
+                <input type="number" id="add-money-input" placeholder="Amount" class="input input-bordered" required />
               </div>
               <div class="form-control">
                 <label class="label">
-                  <span class="label-text">PIN</span>
+                  <span class="label-text font-bold">PIN</span>
                 </label>
-                <input type="password" placeholder="PIN" class="input input-bordered" autocomplete="off" required />
+                <input type="password" id="pin-number-input" placeholder="PIN" class="input input-bordered"
+                  autocomplete="off" required />
               </div>
               <div class="form-control mt-6">
                 <button id="add-mony-btn" class="btn btn-primary">Add Money</button>
@@ -49,6 +53,29 @@
             </form>
           </div>
           <!-- Ad Mony Form End -->
+
+          <!-- Cash out Form Start -->
+          <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+            <form class="card-body">
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text font-bold">Amount</span>
+                </label>
+                <input type="number" id="cash-out-input" placeholder="Amount" class="input input-bordered" required />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text font-bold">PIN</span>
+                </label>
+                <input type="password" id="cash-out-pin" placeholder="PIN" class="input input-bordered"
+                  autocomplete="off" required />
+              </div>
+              <div class="form-control mt-6">
+                <button id="cash-out-btn" class="btn btn-primary">Cash Out</button>
+              </div>
+            </form>
+          </div>
+          <!-- Cash out Form End -->
         </div>
       </div>
     </div>
