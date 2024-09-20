@@ -10,77 +10,80 @@
 </head>
 
 <body>
-  <main class="flex justify-center">
-    <div class="mockup-phone">
-      <div class="camera"></div>
-      <div class="display">
-        <div class="artboard artboard-demo phone-3">
-
-          <div class="stats shadow">
-            <div class="stat space-y-2">
-              <div class="flex justify-center items-center">
-                <div id="balance" class="stat-value text-center">00</div>
-                <div class="text-3xl font-bold">&nbsp;tk</div>
-              </div>
-              <div class="text-xl">Available Balance</div>
-            </div>
+  <main class="grid place-items-center h-screen">
+    <section>
+      <div class="flex justify-center">
+        <img src="./icons/money.png" alt="">
+      </div>
+      <div class="stats border-2 flex justify-center">
+        <div class="stat space-y-2">
+          <div class="flex justify-center items-center">
+            <div id="balance" class="stat-value text-center">530</div>
+            <div class="text-3xl font-bold">&nbsp;tk</div>
           </div>
-          <div class="divider"></div>
-          <div>
-            <button class="btn btn-active btn-primary">Add Money</button>
-            <button class="btn btn-active btn-secondary">Cash Out</button>
-          </div>
-          <div class="divider"></div>
-          <!-- Ad Mony Form Start -->
-          <div class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-            <form class="card-body">
-              <div class="form-control">
-                <label class="label">
-                  <span class="label-text font-bold">Amount</span>
-                </label>
-                <input type="number" id="add-money-input" placeholder="Amount" class="input input-bordered" required />
-              </div>
-              <div class="form-control">
-                <label class="label">
-                  <span class="label-text font-bold">PIN</span>
-                </label>
-                <input type="password" id="pin-number-input" placeholder="PIN" class="input input-bordered"
-                  autocomplete="off" required />
-              </div>
-              <div class="form-control mt-6">
-                <button id="add-mony-btn" class="btn btn-primary">Add Money</button>
-              </div>
-            </form>
-          </div>
-          <!-- Ad Mony Form End -->
-
-          <!-- Cash out Form Start -->
-          <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-            <form class="card-body">
-              <div class="form-control">
-                <label class="label">
-                  <span class="label-text font-bold">Amount</span>
-                </label>
-                <input type="number" id="cash-out-input" placeholder="Amount" class="input input-bordered" required />
-              </div>
-              <div class="form-control">
-                <label class="label">
-                  <span class="label-text font-bold">PIN</span>
-                </label>
-                <input type="password" id="cash-out-pin" placeholder="PIN" class="input input-bordered"
-                  autocomplete="off" required />
-              </div>
-              <div class="form-control mt-6">
-                <button id="cash-out-btn" class="btn btn-primary">Cash Out</button>
-              </div>
-            </form>
-          </div>
-          <!-- Cash out Form End -->
+          <div class="text-xl text-center">Available Balance</div>
         </div>
       </div>
+      <div class="divider"></div>
+      <div class="flex justify-center gap-4">
+        <button id="show-add-mony" class="btn btn-active btn-primary">Add Money</button>
+        <button id="show-cash-out" class="btn btn-active btn-secondary">Cash Out</button>
+      </div>
+      <div class="divider"></div>
+      <!-- Ad Mony Form Start -->
+      <div id="add-money-form" class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+        <form class="card-body">
+          <div class="form-control">
+            <label class="label">
+              <span class="label-text font-bold">Amount</span>
+            </label>
+            <input type="number" id="add-money-input" placeholder="Amount" class="input input-bordered" required />
+          </div>
+          <div class="form-control">
+            <label class="label">
+              <span class="label-text font-bold">PIN</span>
+            </label>
+            <input type="password" id="pin-number-input" placeholder="PIN" class="input input-bordered"
+              autocomplete="off" required />
+          </div>
+          <div class="form-control mt-6">
+            <button id="add-mony-btn" class="btn btn-primary">Add Money</button>
+          </div>
+        </form>
+      </div>
+      <!-- Ad Mony Form End -->
+
+      <!-- Cash out Form Start -->
+      <div id="cash-out-form" class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+        <form class="card-body">
+          <div class="form-control">
+            <label class="label">
+              <span class="label-text font-bold">Amount</span>
+            </label>
+            <input type="number" id="cash-out-input" placeholder="Amount" class="input input-bordered" required />
+          </div>
+          <div class="form-control">
+            <label class="label">
+              <span class="label-text font-bold">PIN</span>
+            </label>
+            <input type="password" id="cash-out-pin" placeholder="PIN" class="input input-bordered"
+              autocomplete="off" required />
+          </div>
+          <div class="form-control mt-6">
+            <button id="cash-out-btn" class="btn btn-secondary">Cash Out</button>
+          </div>
+        </form>
+      </div>
+      <!-- Cash out Form End -->
     </div>
+    </section>
+
+    <footer class="mt-5">
+      <h3 class="py-4 bg-green-100 w-screen text-center">Design & Developed By <span class="text-red-500">TOREQUL</span></h3>
+    </footer>
   </main>
 
+  <script src="/JS/features.js"></script>
   <script src="./JS/home.js"></script>
 </body>
 
